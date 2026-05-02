@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /404.html
 
-Sitemap: https://jemebeseka.com/sitemap.xml
+Sitemap: https://jemebeseka.netlify.app/sitemap.xml

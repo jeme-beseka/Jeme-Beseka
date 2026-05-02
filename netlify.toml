@@ -38,15 +38,15 @@ Cache-Control = "public, max-age=0, must-revalidate"
 # ─── REDIRECTS ───────────────────────────────────────────────────
 # Force HTTPS (handled by Netlify automatically, but explicit is better)
 [[redirects]]
-from = "http://jemebeseka.com/*"
-to   = "https://jemebeseka.com/:splat"
+from = "https://jemebeseka.netlify.app/*"
+to   = "https://jemebeseka.netlify.app/:splat"
 status = 301
 force = true
 
 # www → non-www
 [[redirects]]
-from = "https://www.jemebeseka.com/*"
-to   = "https://jemebeseka.com/:splat"
+from = "https://jemebeseka.netlify.app/*"
+to   = "https://jemebeseka.netlify.app/:splat"
 status = 301
 force = true
 
