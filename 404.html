@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 — Page Not Found | Jeme Beseka Foncham</title>
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        (function() {
+            var t = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg);
+        }
+        .error-code {
+            font-size: clamp(5rem, 18vw, 10rem);
+            font-weight: 800;
+            color: var(--coral);
+            opacity: 0.15;
+            line-height: 1;
+            font-family: 'Fira Code', monospace;
+            display: block;
+            margin-bottom: -1rem;
+        }
+        .error-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--heading);
+            margin-bottom: 1rem;
+        }
+        .error-sub {
+            color: var(--body);
+            margin-bottom: 2.5rem;
+            max-width: 380px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .mono-label {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.8rem;
+            color: var(--coral);
+            margin-bottom: 1rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="error-page">
+    <div>
+        <span class="error-code">404</span>
+        <span class="mono-label">// page.not.found</span>
+        <h1 class="error-title">Nothing here.</h1>
+        <p class="error-sub">The page you're looking for doesn't exist or has been moved.</p>
+        <a href="/" class="btn btn-primary">← Back to Home</a>
+    </div>
+</div>
+</body>
+</html>
