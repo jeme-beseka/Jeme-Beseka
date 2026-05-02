@@ -36,8 +36,19 @@ for = "/index.html"
 Cache-Control = "public, max-age=0, must-revalidate"
 
 # ─── REDIRECTS ───────────────────────────────────────────────────
-# NOTE: HTTPS and www → non-www redirects are handled automatically
-# by Netlify — no manual rules needed. Adding them causes redirect loops.
+# Force HTTPS (handled by Netlify automatically, but explicit is better)
+[[redirects]]
+from = "http://jemebeseka.com/*"
+to   = "https://jemebeseka.com/:splat"
+status = 301
+force = true
+
+# www → non-www
+[[redirects]]
+from = "https://www.jemebeseka.com/*"
+to   = "https://jemebeseka.com/:splat"
+status = 301
+force = true
 
 # 404 fallback
 [[redirects]]
